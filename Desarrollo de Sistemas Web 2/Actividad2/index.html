@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- "en este espacio se encuentra la barra de navegacion con los departamentos, productos, etc." -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tienda Edgar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    departamentos
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Departamentos</a></li>
+                    <li><a class="dropdown-item" href="#">Joyeria</a></li>
+                    <li><a class="dropdown-item" href="#">Ropa</a></li>
+                    <li><a class="dropdown-item" href="#">Electronica</a></li>
+                    <li><a class="dropdown-item" href="#">Muebles</a></li>
+                    <li><a class="dropdown-item" href="#">Jugueteria</a></li>
+                    <li><a class="dropdown-item" href="#">Linea Blanca</a></li>
+                    <li><a class="dropdown-item" href="#">Liquidaciones</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+
+        <!-- "en este espacio se encuentra el carrusel de las imagenes de los departamentos, productos, etc." -->
+    <div class="row justify-content-center my-4">
+    <div class="col-12 col-md-8">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner text-center">
+                    <div class="carousel-item active">
+                    <img src="Imagenes/Rog_Ally.jpg" class="d-block w-40" alt="Rog Ally">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="imagenes/Series_X.jpg" class="d-block w-40" alt="Xbox Series X">
+                    </div>
+                    <div class="carousel-item">
+                    <img src="imagenes/Laptop.jpg" class="d-block w-40" alt="Laptop">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+    </div>
+
+        <!-- EN ESTE ESPACIO IRAN LOS BOTONES DE CATEGORIAS PRINCIPALES EN FORMATO DE ICONO POR LO QUE SE AGREGARA UNA IMAGEN REPRESENTATIVA DE CADA CATEGORIA PRINCIPAL, COMO LO SON JOYERIA, ROPA, ELECTRONICA, MUEBLES, JUGUETERIA, LINEA BLANCA Y LIQUIDACIONES. -->
+    
+        <div class="container text-center my-4">
+                 <button type="button" class="btn btn-primary">
+                    <img src="imagenes/Anillo.png"  alt="Joyeria"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-secondary">
+                    <img src="imagenes/Ropa.png"  alt="Ropa"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-success">
+                    <img src="imagenes/Electronica.png"  alt="Electronica"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-danger">
+                    <img src="imagenes/Muebles.png"  alt="Muebles"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-warning">
+                    <img src="imagenes/Jugueteria.png"  alt="Jugueteria"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-info">
+                    <img src="imagenes/Linea_Blanca.png"  alt="Linea Blanca"style="width: 40px; height: 40px;"></button>
+                <button type="button" class="btn btn-light">
+                    <img src="imagenes/Liquidaciones.png"  alt="Liquidaciones"style="width: 40px  ; height: 40px;"></button>
+                
+
+        <!-- en este espacio se encuentra un producto popular o recomendado, con su imagen, descripcion y precio. -->
+
+ <div class="container text-center">
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                <img src="imagenes/Rog_Ally.jpg" class="card-img-top" alt="Rog Ally">
+                <div class="card-body">
+                    <h5 class="card-title">Rog Ally $12,999</h5>
+                    <p class="card-text">ROG Ally es una consola híbrida que combina las características de una consola de videojuegos con las de un dispositivo portátil.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                    <div class="card" style="width: 18rem;">
+                <img src="imagenes/Series_X.jpg" class="card-img-top" alt="Series X">
+                <div class="card-body">
+                    <h5 class="card-title">Xbox Series X $9,499</h5>
+                    <p class="card-text">Xbox Series X es la última consola de videojuegos de Microsoft, con un rendimiento potente y características avanzadas.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Oppo.jpg" class="card-img-top" alt="Oppo find x9 pro">
+                <div class="card-body">
+                    <h5 class="card-title">Oppo Find X9 Pro $18,999</h5>
+                    <p class="card-text">El Oppo Find X9 Pro es un smartphone de gama alta con una cámara de alta calidad y un diseño elegante.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Laptop.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop Gaming $15,999</h5>
+                    <p class="card-text">Una laptop de juego de alto rendimiento con gráficos impresionantes y un sistema de refrigeración eficiente.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+            
+
+<!-- aqui se encuentra la informacion resumida de la tienda, como su historia, mision, vision, etc. -->
+
+<h6>Quiénes somos: Especialistas en tecnología de alto rendimiento y soluciones de gaming personalizadas.</h6>
+<h6>Misión: Facilitar el acceso a hardware de vanguardia con un enfoque técnico y confiable.</h6>
+<h6>Visión: Ser el referente líder para entusiastas de la tecnología en México mediante la excelencia técnica.</h6>
+<h6>Valores: Excelencia, innovación, transparencia y compromiso con nuestra comunidad tecnológica.</h6>
+    
+
+                    <!-- aqui se encuentra el pie de pagina  -->
+
+                                    <div class="card text-center">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Siguenos en nuestras redes sociales</h5>
+                    <p class="card-text">https://www.tiktok.com/@hackemi2011.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    2 days ago
+                </div>
+                </div>
+
+<!-- boton de productos al final de la pagina -->
+
+        <div class="text-center my-4">
+            <a href="productos.html" class="btn btn-primary btn-lg">Productos</a>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+                   
+  </body>
+</html>

@@ -1,0 +1,41 @@
+
+# Valor inicial de x0 (valor supuesto)
+x0=5
+
+# Valor de precisiÃ³n (delta)
+delt=0.00001 
+
+#NÃºmero de iteraciones
+n=15
+
+# Escritura de la funciÃ³n (cambiar por los valores deseados)
+f=function(x) x**3+4*x**2-1
+
+
+plot(f,-5,5,
+lwd=1,
+main= "Grafico f(x)",
+col="red",
+xlab="X",
+ylab="Y",
+axes=TRUE,
+n=1000)plot(f,-5,5,
+lwd=1,
+main= "Grafico f(x)",
+col="red",
+xlab="X",
+ylab="Y",
+axes=TRUE,
+n=1000)
+#Derivada de la funciÃ³n (calcular la derivada de la funciÃ³n anterior)
+df=function(x) 3*x**2+8*x
+
+# Ciclo de iteraciones y resultados
+for (i in 1:n) {
+  x1=x0-f(x0)/df(x0)
+  print(c(i,x0,x1)); error=abs(x1-x0)
+  if (error<delt){
+    cat("La soluciÃ³n converge en ",i , "iteraciones. raÃ­z= ", x1);
+    break()}
+  x0=x1}
+print("MÃ¡ximo nÃºmero de iteraciones alcanzada !!!")

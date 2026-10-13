@@ -1,0 +1,25 @@
+#        == MÃ©todo de la Secante == 
+
+# Valores iniciales
+x0=1; xant=0;error=0;
+# Error permitido (delta)
+delt=0.00000001;
+# NÃºmero de mÃ¡ximo iteraciones 
+n=50
+
+# FunciÃ³n para encontrar si raÃ­z
+f=function(x) exp(-x) - x
+
+# CÃ¡lculos usando el mÃ©todo
+for (i in 1:n) {
+  numera=f(x0)*(xant-x0)
+  denomi=f(xant)-f(x0)
+  x1=x0-(numera/denomi)
+  print(c(i, x0, xant, x1)); error=abs(x1-x0)
+  if (error<delt){
+    print(" ")
+    cat("La soluciÃ³n converge en ",i , "iteraciones. raÃ­z= ", x1);
+    break()}
+  x0=x1}
+
+print("MÃ¡ximo nÃºmero de iteraciones alcanzada !!!")

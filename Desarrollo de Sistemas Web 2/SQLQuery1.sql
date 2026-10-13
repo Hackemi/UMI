@@ -1,0 +1,4 @@
+USE [TiendaSara];
+GO
+ALTER AUTHORIZATION ON DATABASE::[TiendaSara] TO [sa];
+GO

@@ -1,0 +1,7 @@
+﻿[Storage]
+ConnectionString=DriverID=ZXML
+StorageId=
+StorageName=TNI storage
+StorageGUID={EA5360A0-157E-41DE-A780-2D99C6A9BDD9}
+ActionTrackerPeriod=0
+

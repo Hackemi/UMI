@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+<!-- "en este espacio se encuentra la barra de navegacion con los departamentos, productos, etc." -->
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tienda Edgar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Departamentos</a></li>
+                    <li><a class="dropdown-item" href="#">Joyeria</a></li>
+                    <li><a class="dropdown-item" href="#">Ropa</a></li>
+                    <li><a class="dropdown-item" href="#">Electronica</a></li>
+                    <li><a class="dropdown-item" href="#">Muebles</a></li>
+                    <li><a class="dropdown-item" href="#">Jugueteria</a></li>
+                    <li><a class="dropdown-item" href="#">Linea Blanca</a></li>
+                    <li><a class="dropdown-item" href="#">Liquidaciones</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+
+<!-- aqui se encuentra elñ boton de ordenar por precio, nombre, etc.  -->
+
+                <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtrar por
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">marca</a></li>
+                    <li><a class="dropdown-item" href="#">nombre</a></li>
+                    <li><a class="dropdown-item" href="#">precio</a></li>
+                </ul>
+                </div>
+
+<!-- aqui se encuentra el boton de ordenar por precio, nombre, etc.  -->
+
+                <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Ordenar por
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">relevancia</a></li>
+                                    <li><a class="dropdown-item" href="#">precio</a></li>
+                                    <li><a class="dropdown-item" href="#">polaridad</a></li>
+                                </ul>
+                                </div>
+
+
+<!-- miniaturas de productos  -->
+
+                        <div class="container text-center">
+                <div class="row">
+                    <div class="card" style="width: 18rem;">
+                <img src="imagenes/Rog_Ally.jpg" class="card-img-top" alt="Rog Ally">
+                <div class="card-body">
+                    <h5 class="card-title">Rog Ally $12,999</h5>
+                    <p class="card-text">ROG Ally es una consola híbrida que combina las características de una consola de videojuegos con las de un dispositivo portátil.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                    <div class="card" style="width: 18rem;">
+                <img src="imagenes/Series_X.jpg" class="card-img-top" alt="Series X">
+                <div class="card-body">
+                    <h5 class="card-title">Xbox Series X $9,499</h5>
+                    <p class="card-text">Xbox Series X es la última consola de videojuegos de Microsoft, con un rendimiento potente y características avanzadas.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Oppo.jpg" class="card-img-top" alt="Oppo find x9 pro">
+                <div class="card-body">
+                    <h5 class="card-title">Oppo Find X9 Pro $18,999</h5>
+                    <p class="card-text">El Oppo Find X9 Pro es un smartphone de gama alta con una cámara de alta calidad y un diseño elegante.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Laptop.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <h5 class="card-title">Laptop Gaming $15,999</h5>
+                    <p class="card-text">Una laptop de juego de alto rendimiento con gráficos impresionantes y un sistema de refrigeración eficiente.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Teclado.jpg" class="card-img-top" alt="Teclado mecanico">
+                <div class="card-body">
+                    <h5 class="card-title">Teclado Mecánico $1,499</h5>
+                    <p class="card-text">Un teclado mecánico de alta calidad con switches responsivos y un diseño duradero.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Mouse.jpg" class="card-img-top" alt="Mouse inalambrico">
+                <div class="card-body">
+                    <h5 class="card-title">Mouse Inalámbrico $999</h5>
+                    <p class="card-text">Un mouse inalámbrico de alta calidad con precisión y durabilidad.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                <div class="card" style="width: 18rem;">
+                <img src="imagenes/Apex5.jpg" class="card-img-top" alt="mando inalambrico Apex 5">
+                <div class="card-body">
+                    <h5 class="card-title">Mando Inalámbrico Apex 5 $5,399</h5>
+                    <p class="card-text">Un mando inalámbrico de alta calidad con respuesta rápida y un diseño ergonómico.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+
+                    <div class="card" style="width: 18rem;">
+                <img src="imagenes/Microfono.jpg" class="card-img-top" alt="Microfono HyperX ">
+                <div class="card-body">
+                    <h5 class="card-title">Microfono HyperX $2,999</h5>
+                    <p class="card-text">Un microfono de alta calidad para streaming y grabación profesional.</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+                </div>
+                </div>
+                </div>
+
+<!-- ESTA ES LA PAGINACION DE LA PAGINA QUE SE EENCUENTRA AL FINAL DE LA PAGINA -->
+                       
+                        <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+                </ul>
+                </nav>
+
+<!-- aqui se encuentra 3 botones con ofertas, nuevo descueto y polupar -->
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-primary">Nuevo</button>
+            <button type="button" class="btn btn-primary">Descuento</button>
+            <button type="button" class="btn btn-primary">Popular</button>
+            </div>
+
+<!-- boton de pagina de inicio al final de la pagina -->
+
+        <div class="text-center my-4">
+            <a href="index.html" class="btn btn-primary btn-lg">Inicio</a>
+        </div>
+
+        <div class="text-center my-4">
+            <a href="Carrito.html" class="btn btn-primary btn-lg">Carrito</a>
+        </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

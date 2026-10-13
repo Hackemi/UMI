@@ -1,0 +1,15 @@
+﻿192.168.1.0/24 {
+  192.168.1.1; login windows,ssh,snmp,vmware
+  192.168.1.2; login windows,ssh,snmp,vmware
+  192.168.1.5; login windows,ssh,snmp,vmware
+  192.168.1.8; login windows,ssh,snmp,vmware
+  192.168.1.13; login current
+  192.168.1.17; login windows,ssh,snmp,vmware
+}; login windows,ssh,snmp,vmware; expand
+192.168.1.2; login windows,ssh,snmp,vmware
+192.168.1.2; login windows,ssh,snmp,vmware
+192.168.1.2; login windows,ssh,snmp,vmware
+192.168.1.2; login windows,ssh,snmp,vmware
+HolaMundo; login current
+HolaMundo; login current
+HolaMundo; login current

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- en este espacio se encuentra la barra de navegacion con los departamentos, productos, etc. -->
+     
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Tienda Edgar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Departamentos</a></li>
+                    <li><a class="dropdown-item" href="#">Joyeria</a></li>
+                    <li><a class="dropdown-item" href="#">Ropa</a></li>
+                    <li><a class="dropdown-item" href="#">Electronica</a></li>
+                    <li><a class="dropdown-item" href="#">Muebles</a></li>
+                    <li><a class="dropdown-item" href="#">Jugueteria</a></li>
+                    <li><a class="dropdown-item" href="#">Linea Blanca</a></li>
+                    <li><a class="dropdown-item" href="#">Liquidaciones</a></li>
+                </ul>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Link</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            </div>
+        </div>
+        </nav>
+
+<!-- en este espacio se encuentra la tabla del carrito de compras, donde se mostraran los productos que el usuario ha agregado al carrito, asi como el precio y la opcion de eliminar el producto del carrito. -->
+
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Precio Unitario</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="imagenes/Rog_Ally.jpg" class="d-block" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;" alt="Rog Ally"></td>
+                            <td>Rog Ally</td>
+                            <td class="precio-unitario" data-precio="12999">$12,999</td>
+                            <td><input type="number" class="form-control cantidad" value="1" min="1" style="width: 70px;" onchange="actualizarCarrito()"></td>
+                            <td class="subtotal">$12,999</td>
+                            <td><button class="btn btn-outline-danger btn-sm">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="imagenes/Microfono.jpg" class="d-block" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;" alt="Microfono HyperX"></td>
+                            <td>Microfono HyperX</td>
+                            <td class="precio-unitario" data-precio="2999">$2,999</td>
+                            <td><input type="number" class="form-control cantidad" value="1" min="1" style="width: 70px;" onchange="actualizarCarrito()"></td>
+                            <td class="subtotal">$2,999</td>
+                            <td><button class="btn btn-outline-danger btn-sm">Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+<!-- oncahnge no se si es correcto, pero es para que cada vez que el usuario cambie la cantidad del producto, se actualice el subtotal y el total del carrito de compras, esto debe realizase -->
+<!-- correctamente con la base de datops que aun no implemento, por eso no sirve en este caso asi como los precios unitarios, pero es para que se actualice automaticamente el subtotal  -->
+<!-- y el total del carrito de compras cada vez que el usuario cambie la cantidad del producto, esto debe realizase -->
+
+<!-- en este espacio se encuentra el resumen de pedido -->
+            <div class="row mt-4">
+                <div class="col-md-6"></div>
+
+                <div class="col-md-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Resumen del pedido</h5>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <p>Subtotal</p>
+                                <p id="resumen-subtotal">$15,998</p>
+                            </div>
+                            <div class="d-flex justify-content-between text-muted">
+                                <p>Envío</p>
+                                <p>Gratis</p>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <h5>Total</h5>
+                                <h5 id="resumen-total">$15,998</h5>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Cupon de descuento" aria-label="Recipient’s username" aria-describedby="button-addon2">
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Verificar</button>
+                                </div>
+                            <div class="d-grid mt-3">
+                                <button class="btn btn-success btn-lg">Seguir Comprando</button>
+                                <hr>
+                                 <button class="btn btn-success btn-lg">Finalizar Compra</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- en este espacio se encuentaran los botones que llevartan a pla pagina de inicio a si como la pagina de productots, etc. -->
+
+                <div class="text-center my-4">
+            <a href="index.html" class="btn btn-primary btn-lg">Inicio</a>
+        </div>
+
+        <div class="text-center my-4">
+            <a href="productos.html" class="btn btn-primary btn-lg">Productos</a>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,105 @@
+#######  VALORES NUM RICOS  #######
+
+## D GITOS ENTEROS Y FRACCIONES ##
+
+
+# Manejo de la representaci n num rica con lenguaje R a trav s de funciones, las representaciones pueden ser con:
+# el signo igual(=) o con las teclas (<-)
+# Para representar cualquier cantidad y aa una variable se escribe:
+
+a = 6384671
+
+# Para que R, nos regrese el valor almacenado en la variable a, solo escribimos a y Enter
+
+a
+
+# Si lo que deseamos es guardar un n mero fracionario, escribimos:
+  
+b <- 0.5342198
+
+# Y para desplegar el valor, se escribe b y Enter
+
+b
+
+# vvv
+# Se puede observar que el resultado nos regresa 7 decimales, pero se puede modificar esa cantidad de decimales
+# Usando la funci n options() y el modificador digits = n; donde n es la cantidad de decimales
+
+options(digits=3)
+1/3.0
+
+# La cantidad de decimales permanece con esa cantidad hasta que se modifique o se reinicie R
+
+options(digits=7)
+1/3.0
+
+
+
+## REDONDEO ##
+
+# La funci n round(x,n); donde x es el valor y n es la cantidad de decimales, sin n es sin decimales
+# Si tenemos un valor de 54.2 y lo redondeamos, obtenemos:
+
+round(54.2)
+
+# Si escribimos una cantidad con m s decimales y le pedimos un n mero particular de decimales,
+# nos proporcionar  ese n mero de decimaeles solicitado y redondeado con el siguiente d gito.
+
+round(97.5684197, 2)
+
+## D GITOS SIGNIFICATIVOS ##
+
+# signif(x,n)  redondea a x, con n d gitos significativsos (default n=6)
+
+signif(27.384956102)
+
+signif(39.6429304521, 5)
+
+signif(61.378045912, 2)
+
+signif(316.6971243547, 3)
+
+### DEFINIR VARIABLES Y ASIGNAR VALORES ###
+
+e <- exp(1)    # Asigna un valor a la variable (Base de los logaritmos naturales e = 2.718281)
+e              # Imprime el valor que tenga la variable
+
+x = 0.005     # Tambi n se puede usar el simbolo <- en lugar de igual
+
+x0 = e ** (2*x)         #  Se la asigna una funci n a x0
+
+tex = "El valor de x0 es: "  # A la variable tex, se le asigna una cadena
+
+cat(tex, x0)                # Se obtine los resultados con la instrucci n cat, que concatena y convierte a string
+
+# Otro ejemplo:
+
+x0 = 1
+
+x1 = x0 - pi * x0 + 1
+
+x1
+
+cat("x0 =", x0, "\n", "x1 =", x1)    # Si usamos "\n" se cambia de rengl n
+
+###  DEFINIR FUNCIONES Y PASAR PAR METROS
+
+d = function(a,b,c) b^2-4*a*c   # se asigna la funci n a la variable d, con los par metros a,b,c; y la funci n b cuadrada menos 4 por a por c
+
+d(2,2,1)                        # Se llma a la funci n y se le dan los par metros para el c lculo y regresa el resultado
+
+
+### GRAFICACI N DE FUNCIONES ###
+
+g = function(x) sin(cos(x)*exp(-x/2))
+plot(g, -8, -5,                        # Rango
+     lwd = 1,                          # Grosor
+     main = "Gr fico de g",            # T tulo del gr fico 
+     col = "red",                      # Color de la l nea
+     xlab = "x",                       # Etiqueta de x
+     ylab="g(x)",                      # Etiqueta de y
+     axes = TRUE,                      # Ejes x,y visibles
+     n = 1000)                         # N mero de puntos
+     
+     
+     
