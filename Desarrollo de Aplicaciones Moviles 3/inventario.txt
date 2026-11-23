@@ -1,0 +1,71 @@
+// Online Swift compiler (editor)
+// Write and run Swift online using this editor.
+
+//print("Try clicking the Run button.")
+
+struct Articulo{
+  var nombre: String
+  var cantidad: Int
+}
+//funcion para poder registrar los articulos en el sistema
+func registroArticulo() -> Articulo{
+  print("Registrar Articulo")
+  print("Ingresa El Nombre")
+  let nombre = readLine()!
+  print("Ingresa la Cantidad")
+  let cantidad = Int (readLine()!)!
+  return Articulo(nombre: nombre, cantidad: cantidad)
+}
+//funcion para el listado
+func mostrarListado(articulos:[Articulo]){
+  print("Listado de articulos")
+  for(indice, articulo) in articulos.enumerated(){
+    print("Articulo\(indice+1): \(articulo.nombre)")
+    print("Cantidad: \(articulo.cantidad)")
+  }
+}
+//funcion para poder consultar los articulos
+func consultaArticulo(articulos:[Articulo]){
+  print("nombre del articulo a consultar: ")
+  let nombre = readLine()!
+  for (indice, articulo) in articulos.enumerated(){
+  if articulo.nombre == nombre {
+    print("Articulo \(indice+1): \(articulo.nombre)")
+    print("cantidad: \(articulo.cantidad)")
+    break
+  }
+}
+}
+
+  
+var articulos:[Articulo]=[]
+var opcion = 0
+//menu
+repeat{
+  print("******************************Menu********************************")
+  print("1.- Resgistro")
+  print("2.- Listado")
+  print("3.- Consulta")
+  print("4.- Salir")
+  opcion = Int(readLine()!)!
+
+  //registro de articulos de caso 1
+  switch opcion {
+    case 1:
+    let nuevoArticulo=registroArticulo()
+    articulos.append(nuevoArticulo)
+    print("*****Registrado*****")
+
+    case 2:
+    mostrarListado(articulos:articulos)
+    print("listado")
+    case 3:
+    consultaArticulo(articulos:articulos)
+    print("Consulta")
+    case 4:
+    print("salir")
+    default:
+    print("Opcion no valida")
+    
+  }
+} while opcion != 4
