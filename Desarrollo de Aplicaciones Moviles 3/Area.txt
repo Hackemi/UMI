@@ -1,0 +1,86 @@
+import Foundation
+// clase figura, este tendra el procedimiento para calcular las figuras
+class Figura {
+
+  // esta funcion permite realizar el calculo de la figura dependiendo de los casos
+
+  func atenderFigura(opcion: Int){
+    switch opcion {
+      case 1:
+      let lado = pedirDato("Ingrese la medida del lado:")
+      let area = calcularArea(lado: lado)
+      print(String(format: "El area del cuadrado es: %.6f\n", area))
+
+      case 2:
+      let lado1 = pedirDato("Ingrese el valor del lado 1:")
+      let lado2 = pedirDato("Ingrese el valor del lado 2:")
+      let area = calcularArea(lado1: lado1, lado2: lado2)
+      print(String(format: "El area del rectangulo es: %.6f\n", area))
+
+      case 3:
+      let base = pedirDato("Ingrese el valor de la base:")
+      let altura = pedirDato("Ingrese el valor de la altura:")
+      let area = calcularArea(base: base, altura: altura)
+      print(String(format: "El area del triangulo es: %.6f\n", area))
+
+      case 4:
+      let radio = pedirDato("Ingrese el valor del radio:")
+      let area = calcularArea(radio: radio)
+      print(String(format: "El area del circulo es: %.6f\n", area))
+
+      case 5:
+      print("saliendo del programa")
+
+      default:
+      print("opcion no valida. .\n")
+    }
+  }
+
+  //metodos de polimorfismo (sobrecarga), metodos para calcular el area 
+  //utilizamos la funcion private y calcular area para que dependiendo del caso y los datos a ingresar, pueda calcular el area
+private func calcularArea(lado: Double) -> Double{
+  return lado * lado
+}
+private func calcularArea(lado1: Double, lado2: Double) -> Double{
+  return lado1 * lado2
+}
+private func calcularArea(base: Double, altura: Double) -> Double{
+  return (base * altura) / 2.0 
+}
+private func calcularArea(radio: Double) -> Double{
+  return 3.14159265 * radio * radio
+}
+
+// metodo auxiliar interno para leer los calores desde la consola
+  private func pedirDato(_ mensaje: String) -> Double{
+    print(mensaje, terminator: " ")
+    if let texto = readLine(), let valor = Double(texto){
+      return valor
+    }
+    return 0.0
+  }
+}
+
+//ejecucion del programa por ciclo
+let gestorFiguras = Figura()
+var opcionSeleccionada = 0
+
+repeat{
+print("**********Menu**********")
+  print("1.- Area del cuadrado")
+  print("2.- Area del rectangulo")
+  print("3.- Area del triangulo")
+  print("4.- Area del circulo")
+  print("5.- Salir")
+  print("Ingrese una opcionm (numero):", terminator: " ")
+
+  if let entrada = readLine(), let opcion = Int(entrada) {
+    opcionSeleccionada = opcion
+    // se envia la opcion seleccionada por parametro al prodecimiento de la clase,
+    gestorFiguras.atenderFigura(opcion: opcionSeleccionada)
+  } else {
+    opcionSeleccionada = 0
+    print("Opcion invalida, por favor ingrese un numero.\n")
+  }
+ 
+} while opcionSeleccionada != 5
